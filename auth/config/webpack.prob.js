@@ -9,13 +9,13 @@ const probConfig = {
     mode: 'production',
     output: {
         filename: `[name].[contenthash].js`,
-        publicPath: '/marketing/latest/'
+        publicPath: '/auth/latest/'
     },
     plugins: [
         new ModuleFedrationPlugin({
-            name: 'marketing',
+            name: 'auth',
             exposes: {
-                './MarketingApp': './src/bootstrap'
+                './AuthApp': './src/bootstrap'
             },
             // shared: ['react', 'react-dom']
             shared: packageJson.dependencies
